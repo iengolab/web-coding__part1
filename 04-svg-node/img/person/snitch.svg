@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="573px" height="573px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 66 66"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil2 {fill:#B6A354}
+    .fil3 {fill:#DCCA80}
+    .fil1 {fill:#F0E765}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="66" height="66"/>
+  <ellipse class="fil1" transform="matrix(1.00214 -0.446987 0.457382 1.02545 38.2188 29.437)" rx="16" ry="15"/>
+  <path class="fil2" d="M50 16c-8,9 -17,15 -28,19l3 5c11,-3 20,-10 29,-18 -1,-2 -2,-4 -4,-6z"/>
+  <path class="fil3" d="M39 31c-6,10 -9,21 -18,26 -1,0 6,-15 5,-15 -1,0 -9,17 -10,17 -2,1 -4,2 -6,2 -1,0 7,-19 6,-19 -1,0 -10,20 -11,20 -2,0 -3,0 -5,1l0 -27c6,-5 27,-4 37,-6 1,0 2,0 2,2z"/>
+ </g>
+</svg>

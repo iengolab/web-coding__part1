@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML</title>
+    <!-- подключаем таблицу стилей -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- объявляем начало таблицы с помощью тега table -->
+    <table>
+        <!-- объявляем начало головной части таблицы с помощью тега thead -->
+        <thead>
+            <!-- создаем строку с помощью тега tr, внутри которой будут расположены ячейки, которые создаем с помощью тега td  -->
+            <tr>
+                <!-- атрибут colspan позволяет соединять указанное количество ячеек по горизонтали -->
+                <td colspan="4">Таблица языков</td>
+            </tr>
+            <tr>
+                <td>№</td>
+                <td>Язык</td>
+                <td>Лого</td>
+                <td>Справочники</td>
+            </tr>
+        </thead>
+        <!-- закончилась головная часть таблицы -->
+        <!-- начинается основная часть таблицы -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>HTML5</td>
+                <td>
+                    <!-- тег img отвечает за отображение изображения -->
+                    <!-- в атрибуте src указан абсолютный или относительный путь расположения файла -->
+                    <img src="img/html.png" alt="">
+                </td>
+                <!-- атрибут rowspan позволяет соединять ячейки по вертикали -->
+                <td rowspan="2">
+                    <!-- начинаем создание маркированного списка с помощью тега ul -->
+                    <ul>
+                        <!-- объявляем отдельный элемент в списке с помощью тега li -->
+                        <li>
+                            <!-- с помощью тега a можно оформить ссылку на другую веб-страницу, которую необходимо указать в атрибуте href -->
+                            <a href="http://htmlbook.ru/">htmlbook.ru</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/ru/docs/Web/HTML">HTML</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/ru/docs/Web/CSS">CSS</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CSS3</td>
+                <td>
+                    <img src="img/css.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>JavaScript</td>
+                <td>
+                    <img src="img/js.png" alt="">
+                </td>
+                <td>
+                    <a href="https://learn.javascript.ru/">learn.javascript.ru</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>SVG</td>
+                <td>
+                    <img src="img/svg.png" alt="">
+                </td>
+                <td>
+                    <a href="https://developer.mozilla.org/ru/docs/Web/SVG">про SVG</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

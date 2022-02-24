@@ -1,0 +1,231 @@
+/* применяем стиль для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    /* преобразовываем вид шрифта */
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    /* задаем фоновый цвет */
+    background-color: #333;
+    /* цвет текста будет наследоваться от родительского элемента */
+    color: inherit;
+}
+
+/* начинаем описание стиля для класса main, объявляем это с помощью . (точки) */
+.main {
+    /* объявляем абсолютную позицию для элемента */
+    position: absolute;
+    /* ширина объекта будет равна 100% */
+    width: 100%;
+    /* высота объекта будет равна 100% */
+    height: 100%;
+    /* объявляем, что контейнер будет гибким, */
+    /* о его спецификации можно посмотреть тут - https://tproger.ru/translations/how-css-flexbox-works/ */
+    display: flex;
+    /* располагаем объекты по центру по горизонтали... */
+    align-items: center;
+    /* ... и по вертикали */
+    justify-content: center;
+    /* объявляем, что контейнер не будет изменять свои ширину и высоту при добавлении отступа */
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.content {
+    /* задаем относительное позиционирование */
+    position: relative;
+    display: flex;
+    /* направление flex-элементов будет по горизонтали */
+    flex-direction: row;
+    align-items: center;
+    /* блок будет занимать всю область до следующего объекта */
+    flex: 1 0 auto;
+}
+
+.block {
+    background-color: #F00;
+    width: 100%;
+    height: 100%;
+    /* задаем максимально возможную высоту */
+    max-height: 160px;
+    /* задаем максимально возможную ширину */
+    max-width: 160px;
+    display: flex;
+    padding: 0px;
+    /* направление flex-элементов будет по вертикали */
+    flex-direction: column;
+    /* объекты начинаются с начала блока */
+    align-items: flex-start;
+    justify-content: center;
+    /*  */
+    font-size: 48px;
+    /* задаем время для изменения параметров стилей */
+    transition: 0.25s;
+    /* подключаем анимацию */
+    animation-name: resizerRect;
+    /* задаем задержку перед началом анимации */
+    animation-delay: 1s;
+    /* задаем продолжительность анимации */
+    animation-duration: 1s;
+    animation-direction: normal;
+    /* объект остается в том стиле, который был задан для конца анимации */
+    animation-fill-mode: forwards;
+    /* делаем текст жирным */
+    font-weight: bold;
+    color: white;
+    box-sizing: border-box;
+    /* отключаем тень */
+    box-shadow: none;
+    /* курсор как для ссылки */
+    cursor: pointer;
+    margin: 24px 0px 24px 24px;
+    z-index: 100;
+}
+
+/* стиль для первого блока */
+.block:first-child {
+    /* при длине контейнера меньше чем буквы, слова не переходят на новую строку */
+    white-space: nowrap;
+    /* отключаем видимость прокрутки */
+    overflow: hidden;
+    /* скрываем текст, если он выходит за рамки блока */
+    text-overflow: ellipsis;
+}
+
+/* псевдокласс :hover, событие при наведении крусора на объект */
+.block:first-child:hover {
+    width: 1000%;
+}
+
+.block:nth-child(2),
+.block:nth-child(3) {
+    align-items: center;
+    z-index: 99;
+}
+
+.block:last-child {
+    margin-right: 24px;
+}
+
+.block:nth-child(2):hover {
+    /* параметр transform */
+    /* translateY позволяет перемещать объект по вертикали */
+    /* scale позволяет изменять масштаб элемента */
+    transform: translateY(72px) scale(0.75);
+}
+
+.block:nth-child(3):hover {
+    transform: translateY(-24px) scale(0.75);
+}
+
+.block:hover {
+    background: #444;
+    color: white;
+}
+
+.block:hover div:nth-child(2),
+.block:hover div:nth-child(3) {
+    /* применяем тень для текста */
+    /* первое значение смещение по оси Y, вторая по - X */
+    /* nhtnbq - цвет тени */
+    text-shadow: 6px 6px #9400D3, 12px 12px #4B0082, 18px 18px #0000FF, 24px 24px #00FF00, 30px 30px #FFFF00, 36px 36px #FF7F00, 42px 42px #FF0000;
+}
+
+.block div {
+    transition: 0.25s;
+}
+
+.block div:nth-child(1) {
+    margin-bottom: -12px;
+    font-size: 72px;
+    animation-name: resizerWord;
+    animation-delay: 2.2s;
+    animation-duration: 0.25s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.block div:nth-child(2) {
+    text-indent: 24px;
+}
+
+.block div:nth-child(3) {
+    text-indent: 48px;
+}
+
+footer {
+    /* всегда будет примыкать к концу блока (по вертикали) */
+    flex: 0 0 auto;
+    color: white;
+    background: none;
+    padding: 24px;
+    box-sizing: border-box;
+    font-size: 12px;
+    opacity: 0.75;
+    text-align: center;
+}
+
+/* создаем ключевые кадры анимации */
+@keyframes resizerRect {
+    0% {
+        max-width: 160px;
+        max-height: 160px;
+        padding: 0px;
+    }
+
+    20% {
+        padding: 24px;
+        max-width: 360px;
+        max-height: 160px;
+    }
+
+    50% {
+        padding: 24px;
+        max-width: 360px;
+        max-height: 200px;
+    }
+
+    90% {
+        padding: 24px;
+        max-height: 240px;
+        max-width: 360px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    100% {
+        padding: 24px;
+        max-height: 240px;
+        max-width: 360px;
+        border-radius: 24px;
+        box-shadow: 6px 6px 6px #222;
+    }
+}
+
+@keyframes resizerWord {
+    0% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 3px 3px #0000FF;
+    }
+}
+
+/* создаем правило для экрана с шириной меньше 720px */
+@media (max-width: 720px) {
+
+    .block:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .block:nth-child(2),
+    .block:nth-child(3) {
+        position: absolute;
+        left: calc(50% - 48px);
+        width: auto;
+        height: auto;
+    }
+}
